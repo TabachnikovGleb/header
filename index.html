@@ -12,29 +12,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <header>
+    <header class="desktop">
         <nav class="top-nav">        
-        <div class="select-box">
-            <div class="select-box__current" tabindex="1">
-            <div class="select-box__value">
-                <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked"/>
-                <p class="select-box__input-text">RU</p>
+            <div class="select-box">
+                <div class="select-box__current" tabindex="1">
+                <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="0" value="1" name="lang" checked="checked"/>
+                    <p class="select-box__input-text">RU</p>
+                </div>
+                <div class="select-box__value">
+                    <input class="select-box__input" type="radio" id="1" value="2" name="lang"/>
+                    <p class="select-box__input-text">EN</p>
+                </div>
+                <img class="select-box__icon" src="Polygon 2.png" alt="Arrow Icon" aria-hidden="true"/>
+                </div>
+                <ul class="select-box__list">
+                <li>
+                    <label class="select-box__option first" for="0" aria-hidden="aria-hidden">RU</label>
+                </li>
+                <li>
+                    <label class="select-box__option second" for="1" aria-hidden="aria-hidden">EN</label>
+                </li>
+                </ul>
             </div>
-            <div class="select-box__value">
-                <input class="select-box__input" type="radio" id="1" value="2" name="Ben"/>
-                <p class="select-box__input-text">EN</p>
-            </div>
-            <img class="select-box__icon" src="Polygon 2.png" alt="Arrow Icon" aria-hidden="true"/>
-            </div>
-            <ul class="select-box__list">
-            <li>
-                <label class="select-box__option first" for="0" aria-hidden="aria-hidden">RU</label>
-            </li>
-            <li>
-                <label class="select-box__option second" for="1" aria-hidden="aria-hidden">EN</label>
-            </li>
-            </ul>
-        </div>
         <div class="top-nav-links">
             <ul>
             <li><a href="#">Новости и блог</a></li>
@@ -57,6 +57,7 @@
         </div>
         </nav>
         <nav class="second-nav">
+            <div></div>
             <div class="second-nav-links">
                 <ul>
                     <li><a href="#">Каталог</a></li>
@@ -81,7 +82,7 @@
                         </svg> 
                     </div>
                     <div class="callback">
-                    <h3>+7 (499) 877-41-45</h3>
+                    <h4>+7 (499) 877-41-45</h4>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.5">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3069 2.67206C11.9036 1.26709 10.0373 0.493011 8.04904 0.492188C3.95206 0.492188 0.617706 3.82645 0.616058 7.92453C0.615509 9.23456 0.957733 10.5134 1.60822 11.6406L0.553711 15.4922L4.49405 14.4586C5.57977 15.0508 6.80209 15.3629 8.04602 15.3633H8.04913C12.1457 15.3633 15.4804 12.0287 15.4819 7.93048C15.4828 5.94434 14.7103 4.07693 13.3069 2.67206ZM8.04904 14.108H8.04648C6.93796 14.1075 5.85077 13.8096 4.9021 13.2469L4.67661 13.1129L2.33835 13.7263L2.96246 11.4466L2.81552 11.2128C2.19708 10.2292 1.87051 9.09228 1.87106 7.92499C1.87234 4.51877 4.64383 1.74756 8.05151 1.74756C9.70166 1.74811 11.2528 2.39154 12.4192 3.5593C13.5856 4.72705 14.2276 6.27924 14.227 7.93002C14.2256 11.3365 11.4543 14.108 8.04904 14.108V14.108ZM11.4378 9.48102C11.2521 9.388 10.339 8.93884 10.1687 8.87677C9.99857 8.81479 9.8746 8.78393 9.75092 8.96979C9.62704 9.15564 9.27118 9.57403 9.16278 9.69791C9.05438 9.82187 8.94617 9.83743 8.76041 9.74441C8.57465 9.65149 7.97626 9.45529 7.26682 8.82257C6.71475 8.33011 6.34204 7.72192 6.23364 7.53607C6.12543 7.35004 6.23273 7.25922 6.31512 7.15704C6.51617 6.90738 6.7175 6.64563 6.77939 6.52176C6.84137 6.3978 6.81033 6.28931 6.76382 6.19638C6.7175 6.10345 6.34607 5.1893 6.19135 4.81732C6.04047 4.45532 5.88748 4.50421 5.77341 4.49853C5.66519 4.49313 5.54132 4.49203 5.41745 4.49203C5.29367 4.49203 5.09244 4.53845 4.92215 4.72449C4.75195 4.91043 4.27222 5.35968 4.27222 6.27383C4.27222 7.18799 4.93771 8.07111 5.03055 8.19507C5.12338 8.31903 6.34021 10.1949 8.20322 10.9993C8.64633 11.1909 8.99222 11.305 9.26202 11.3906C9.70697 11.532 10.1117 11.512 10.4318 11.4642C10.7887 11.4109 11.5305 11.0149 11.6854 10.5811C11.8401 10.1472 11.8401 9.77545 11.7936 9.69791C11.7473 9.62045 11.6234 9.57403 11.4378 9.48102V9.48102Z" fill="#181A31"/>
@@ -102,10 +103,69 @@
             </div>
         </nav>
     </header>
+    <header class="tablet">
+        <div class="select-box">
+            <div class="select-box__current" tabindex="1">
+            <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="0" value="1" name="lang" checked="checked"/>
+                <p class="select-box__input-text">RU</p>
+            </div>
+            <div class="select-box__value">
+                <input class="select-box__input" type="radio" id="1" value="2" name="lang"/>
+                <p class="select-box__input-text">EN</p>
+            </div>
+            <img class="select-box__icon" src="Polygon 2.png" alt="Arrow Icon" aria-hidden="true"/>
+            </div>
+            <ul class="select-box__list">
+            <li>
+                <label class="select-box__option first" for="0" aria-hidden="aria-hidden">RU</label>
+            </li>
+            <li>
+                <label class="select-box__option second" for="1" aria-hidden="aria-hidden">EN</label>
+            </li>
+            </ul>
+        </div>
+        <div class="cart-wrap">
+            <div class="callback-wrap">
+                <div class="svg-wrap">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.5">
+                    <path d="M10.2781 14.1204L10.0135 17.843C10.3921 17.843 10.5561 17.6804 10.7528 17.485L12.5281 15.7884L16.2068 18.4824C16.8815 18.8584 17.3568 18.6604 17.5388 17.8617L19.9535 6.54703L19.9541 6.54637C20.1681 5.54903 19.5935 5.15903 18.9361 5.4037L4.74279 10.8377C3.77412 11.2137 3.78879 11.7537 4.57812 11.9984L8.20678 13.127L16.6355 7.85303C17.0321 7.59037 17.3928 7.7357 17.0961 7.99837L10.2781 14.1204Z" fill="#181A31"/>
+                    </g>
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.5">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3069 2.67206C11.9036 1.26709 10.0373 0.493011 8.04904 0.492188C3.95206 0.492188 0.617706 3.82645 0.616058 7.92453C0.615509 9.23456 0.957733 10.5134 1.60822 11.6406L0.553711 15.4922L4.49405 14.4586C5.57977 15.0508 6.80209 15.3629 8.04602 15.3633H8.04913C12.1457 15.3633 15.4804 12.0287 15.4819 7.93048C15.4828 5.94434 14.7103 4.07693 13.3069 2.67206ZM8.04904 14.108H8.04648C6.93796 14.1075 5.85077 13.8096 4.9021 13.2469L4.67661 13.1129L2.33835 13.7263L2.96246 11.4466L2.81552 11.2128C2.19708 10.2292 1.87051 9.09228 1.87106 7.92499C1.87234 4.51877 4.64383 1.74756 8.05151 1.74756C9.70166 1.74811 11.2528 2.39154 12.4192 3.5593C13.5856 4.72705 14.2276 6.27924 14.227 7.93002C14.2256 11.3365 11.4543 14.108 8.04904 14.108V14.108ZM11.4378 9.48102C11.2521 9.388 10.339 8.93884 10.1687 8.87677C9.99857 8.81479 9.8746 8.78393 9.75092 8.96979C9.62704 9.15564 9.27118 9.57403 9.16278 9.69791C9.05438 9.82187 8.94617 9.83743 8.76041 9.74441C8.57465 9.65149 7.97626 9.45529 7.26682 8.82257C6.71475 8.33011 6.34204 7.72192 6.23364 7.53607C6.12543 7.35004 6.23273 7.25922 6.31512 7.15704C6.51617 6.90738 6.7175 6.64563 6.77939 6.52176C6.84137 6.3978 6.81033 6.28931 6.76382 6.19638C6.7175 6.10345 6.34607 5.1893 6.19135 4.81732C6.04047 4.45532 5.88748 4.50421 5.77341 4.49853C5.66519 4.49313 5.54132 4.49203 5.41745 4.49203C5.29367 4.49203 5.09244 4.53845 4.92215 4.72449C4.75195 4.91043 4.27222 5.35968 4.27222 6.27383C4.27222 7.18799 4.93771 8.07111 5.03055 8.19507C5.12338 8.31903 6.34021 10.1949 8.20322 10.9993C8.64633 11.1909 8.99222 11.305 9.26202 11.3906C9.70697 11.532 10.1117 11.512 10.4318 11.4642C10.7887 11.4109 11.5305 11.0149 11.6854 10.5811C11.8401 10.1472 11.8401 9.77545 11.7936 9.69791C11.7473 9.62045 11.6234 9.57403 11.4378 9.48102V9.48102Z" fill="#181A31"/>
+                    </g>
+                    </svg> 
+                </div>
+                <div class="callback">
+                <h4>+7 (499) 877-41-45</h4>
+                <p class="send-call">Заказать звонок</p>
+            </div>
+            </div>
+            <div class="stick"></div>
+            <div class="cart">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 1.5C5.05573 1.5 4.16656 1.94458 3.6 2.7L2.85 3.7C2.46053 4.21929 2.25 4.85089 2.25 5.5V15C2.25 15.3978 2.40804 15.7794 2.68934 16.0607C2.97064 16.342 3.35218 16.5 3.75 16.5H14.25C14.6478 16.5 15.0294 16.342 15.3107 16.0607C15.592 15.7794 15.75 15.3978 15.75 15V5.5C15.75 4.85089 15.5395 4.21929 15.15 3.7L14.4 2.7C13.8334 1.94458 12.9443 1.5 12 1.5H6Z" fill="#008EF8"/>
+                <path d="M2.25 4.5H15.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 7.5C12 8.29565 11.6839 9.05871 11.1213 9.62132C10.5587 10.1839 9.79565 10.5 9 10.5C8.20435 10.5 7.44129 10.1839 6.87868 9.62132C6.31607 9.05871 6 8.29565 6 7.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                        
+                <p>Корзина</p>
+            </div>
+        </div>
+        <div class="menu btn2" data-menu="2">
+            <div class="icon"></div>
+          </div>
+    
+    </header>
 </body>
 <script>
     $('.dropdown').on('click', ()=>{
         $('.hiden').toggle()
     })
+    $('.menu').click (function(){
+  $(this).toggleClass('open');
+});
 </script>
 </html>
