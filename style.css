@@ -228,10 +228,18 @@ header{
         height: 50px;
         background-color: #fff;
     }
+    .tablet .callback h4{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .tablet .send-call{
+        font-size: 12px;
+    }
     .tablet .svg-wrap{
         display: flex;
         align-items: center;
         height: 50px;
+        margin: 0;
     }
     .tablet .svg-wrap svg{
         margin: 0 20px 0 0;
@@ -241,6 +249,7 @@ header{
     }
     .select-box__input-text{
         color: #181A31;
+        opacity: 0.5;
     }
     .btn2 {
         position:relative;
@@ -374,7 +383,7 @@ header{
           display: none;
       }
 }
-@media screen and (max-width:460px) {
+@media screen and (max-width:440px) {
     .tablet .svg-wrap{
         display: none;
     }
