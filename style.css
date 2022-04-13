@@ -19,7 +19,6 @@ header{
     position: relative;
     display: block;
     width: 50px;
-    height: 40px;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 12px;
@@ -60,15 +59,16 @@ header{
 }
 .select-box__input-text {
     display: none;
-    width: 100%;
-    margin: 0;
-    padding: 15px;
+    padding: 11px;
     background-color: transparent;
+}
+.select-box__input-text:hover{
+    color: #fff;
 }
 .select-box__list {
     position: absolute;
-    width: 100%;
-    padding: 0;
+    top: 35px;
+    left: 10px;
     list-style: none;
     opacity: 0;
 }
@@ -94,8 +94,9 @@ header{
     justify-content: center;
 }
 .top-nav{
+    height: 40px;
     display: grid;
-    grid-template-columns: minmax(auto, 410px) minmax(auto, 560px) minmax(auto, 580px);
+    grid-template-columns: minmax(min-content, 410px) minmax(max-content, 560px) minmax(auto, 580px);
     align-items: center;
     justify-items: end;
 }
@@ -117,14 +118,14 @@ header{
     opacity: 0.1;
     font-size: 18px;
 }
-.top-nav .input-wrap{
+.input-wrap{
     position: relative;
     border-radius: 5px;
     padding: 3px;
     width: 273px;
     background-color:rgb(255, 255, 255,0.1);
 }
-.top-nav .input-wrap input{
+.input-wrap input{
     background-color: transparent;
     outline: 0;
     font-weight: 400;
@@ -132,14 +133,14 @@ header{
     border: 0;
     padding: 5px 5px;
 }
-.top-nav .input-wrap svg{  
+.input-wrap svg{  
     position: absolute;
     right: 11px;
     top: 9px;
 }
 .second-nav{
     display: grid;
-    grid-template-columns: minmax(auto,550px) minmax(auto,560px) minmax(auto,440px);
+    grid-template-columns: minmax(min-content,550px) minmax(max-content,560px) minmax(max-content,440px);;
     align-items: center;
     justify-items: end;
     height: 60px;
@@ -164,7 +165,7 @@ header{
 .dropdown:hover svg{
     -webkit-transform: rotate(180deg);
 }
-.second-nav-links ul li{
+.second-nav .second-nav-links ul li{
     padding: 0 20px;
 }
 .second-nav-links ul li > ul li{
@@ -173,7 +174,7 @@ header{
 .second-nav-links ul li > ul li:hover{
     color: #0081E1;
 }
-.second-nav-links ul li > ul{
+.second-nav .second-nav-links ul li > ul{
     display: none;
     top: 62px;
     left: 0;
@@ -215,13 +216,13 @@ header{
     display: none;
 }
 @media screen and (max-width:768px) {
-    header.desktop{
+    header.desktop, .change-lang , hr:last-of-type{
         display: none;
     }
     .tablet{
         position: relative;
         display: grid;
-        grid-template-columns: minmax(auto,225px) minmax(auto,1fr) minmax(auto,70px);
+        grid-template-columns: minmax(auto,225px) minmax(max-content,1fr) minmax(auto,70px);
         align-items: center;
         justify-items: end;
         height: 50px;
@@ -237,6 +238,9 @@ header{
     }
     .tablet .callback-wrap{
         align-items: center;
+    }
+    .select-box__input-text{
+        color: #181A31;
     }
     .btn2 {
         position:relative;
@@ -285,5 +289,158 @@ header{
       .btn2:hover {
         cursor: pointer;
       }
+      .tablet .menu {
+          position: relative;
+      }
+      .tablet .input-wrap{
+          position: relative;
+          background-color: rgba(170, 177, 183, 0.1);
+          width: 252px;
+          margin: 16px 0 24px;
+      }
+      .tablet .input-wrap svg{
+          opacity: 0.5;
+      }
+      .tablet .menu-wrap{
+          display: none;
+          max-height: 598px;
+          position: absolute;
+          background-color: #fff;
+          top: 50px;
+          right: 0;
+          padding: 24px;
+      }
+      .tablet .second-nav-links .hiden-tablet{
+          display: none;
+      }
+      .hiden-tablet li{
+          padding: 10px 0;
+          margin: 0 0 0 16px;
+      }
+      .dropdownhover{
+        align-items: center;
+      }
+      .dropdownhover img{
+            margin:3px;
+            transition: 0.3s ease-in-out;
+      }
+      .dropdownhover:hover .hiden-tablet{
+          display: initial;
+      }
+      .dropdownhover ul a:hover{
+          color:#008EF8;
+      }
+      .dropdownhover:hover img{
+          transform: rotate(180deg);
+      }
+      .tablet .second-nav-links{
+          max-height: 420px;
+          margin-top: 50px;
+          overflow-y: scroll;
+      }
       
+      .tablet .second-nav-links ul{
+          list-style: none;
+      }
+      .tablet .second-nav-links ul li{
+          padding: 10px 0;
+      }
+      .tablet .second-nav-links a{
+        font-weight: 600;
+        font-size: 16px;
+      }
+      hr{
+          position: absolute;
+          width: 300px;
+          color: #D2D9DF;
+          opacity: 0.5;
+          left: 0;
+      }
+
+      ::-webkit-scrollbar {
+        width: 1px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #ECEFF3;
+        border-radius: 100px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D2D9DF;
+        width: 1px;
+        border-radius: 100px;
+        box-shadow: 0px 0px 0px 2px #D2D9DF;
+      }
+      .tablet .callback-wrap-mobile{
+          display: none;
+      }
+}
+@media screen and (max-width:460px) {
+    .tablet .svg-wrap{
+        display: none;
+    }
+}
+@media screen and (max-width:375px){
+    .tablet .callback-wrap , .stick, .cart p, .select-box:nth-child(1), .tablet hr:first-of-type{
+        display: none;
+    }
+    .tablet{
+        grid-template-columns: minmax(auto, 1fr) minmax(auto,66px);
+    }
+    .tablet .menu-wrap{
+        min-width: 320px;
+        padding: 12px;
+    }
+    .tablet .mobile-menu{
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 10px;
+    }
+    .tablet .input-wrap{
+        width: 156px;
+        margin: 0;
+    }
+    .tablet .second-nav-links{
+        margin: 0 0 27px 0;
+    }
+    .tablet .callback-wrap-mobile{
+        display: flex;
+        margin-top: 39px;
+    }
+    .tablet .callback-wrap-mobile h4{
+        font-weight: 600;
+        font-size: 22px;
+        color: #008EF8;
+    }
+    .tablet .hiden-tablet li a:hover{
+        color: #008EF8;
+    }
+    .tablet .callback-wrap-mobile .send-call{
+        color: #181A31;
+        font-weight: 400;
+        margin-top: 8px;
+        font-size: 14px;
+        opacity: 0.5;
+    }
+    .tablet .svg-wrap-mobile{
+        display: flex;
+        margin-left: 33px;
+    }
+    .tablet .svg-wrap-mobile svg:first-of-type{
+        margin: 0 8px 0 0;
+    }
+    .tablet hr:last-of-type{
+        width: 320px;
+        display: block;
+    }
+    .tablet .change-lang{
+        display: flex;
+        align-items: center;
+        margin: 0 16px;
+        font-weight: 600;
+        font-size: 12px;
+    }
+    .tablet .change-lang p{
+        color: #181A31;
+        opacity: 0.5;
+    }
 }
